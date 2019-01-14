@@ -1,0 +1,47 @@
+#container {
+  overflow: hidden;
+  position: relative;
+  background-color:white;
+  /* background-color:red /* use this for bound debugging */
+  background-repeat: no-repeat;
+  background-size:100%;
+  margin: 0px auto;
+}
+#container img {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* how we center the image by default */
+  left: 50%;
+}
+#container img.zoomedIn:active {
+  cursor: move;
+}
+.controlls {
+  right: 0px;
+  top:0px;
+  position: absolute;
+}
+.controlls button {
+  cursor: pointer;
+  display: block;
+  width:40px;
+  height:40px;
+  background-repeat: no-repeat;
+  border:none;
+  text-indent: -9999px;
+  background-size:50%;
+  background-position: center center;
+  margin: 10px;
+  background-color:transparent;
+}
+.controlls button:disabled {
+  opacity:0.4;
+  cursor: default;
+}
+.controlls .zoomIn {
+  background-image: url('/img/zoom-in.svg');
+}
+.controlls .zoomOut {
+  background-image: url('/img/zoom-out.svg');
+}
